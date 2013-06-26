@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9886E4D177A027C009C4356 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9886E4C177A027C009C4356 /* UIKit.framework */; };
+		A9886E4F177A027C009C4356 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9886E4E177A027C009C4356 /* Foundation.framework */; };
+		A9886E51177A027C009C4356 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9886E50177A027C009C4356 /* CoreGraphics.framework */; };
+		A9886E57177A027C009C4356 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9886E55177A027C009C4356 /* InfoPlist.strings */; };
+		A9886E59177A027C009C4356 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9886E58177A027C009C4356 /* main.m */; };
+		A9886E5D177A027C009C4356 /* MMJStackiOSViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9886E5C177A027C009C4356 /* MMJStackiOSViewAppDelegate.m */; };
+		A9886E5F177A027C009C4356 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A9886E5E177A027C009C4356 /* Default.png */; };
+		A9886E61177A027C009C4356 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9886E60177A027C009C4356 /* Default@2x.png */; };
+		A9886E63177A027C009C4356 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9886E62177A027C009C4356 /* Default-568h@2x.png */; };
+		A9886E66177A027C009C4356 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9886E64177A027C009C4356 /* iPhone.storyboard */; };
+		A9886E71177A02EA009C4356 /* MMJStackOverflowFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A9886E70177A02EA009C4356 /* MMJStackOverflowFetcher.m */; };
+		A9886E75177AEBAA009C4356 /* StackOFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9886E74177AEBAA009C4356 /* StackOFTableViewController.m */; };
+		A9886E78177AEC77009C4356 /* iOSStackOFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9886E77177AEC77009C4356 /* iOSStackOFTableViewController.m */; };
+		A9886E7B177AF6EA009C4356 /* StackOFQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9886E7A177AF6EA009C4356 /* StackOFQuestionViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A9886E49177A027C009C4356 /* MMJStackiOSView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMJStackiOSView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9886E4C177A027C009C4356 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A9886E4E177A027C009C4356 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A9886E50177A027C009C4356 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A9886E54177A027C009C4356 /* MMJStackiOSView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MMJStackiOSView-Info.plist"; sourceTree = "<group>"; };
+		A9886E56177A027C009C4356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A9886E58177A027C009C4356 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A9886E5A177A027C009C4356 /* MMJStackiOSView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMJStackiOSView-Prefix.pch"; sourceTree = "<group>"; };
+		A9886E5B177A027C009C4356 /* MMJStackiOSViewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMJStackiOSViewAppDelegate.h; sourceTree = "<group>"; };
+		A9886E5C177A027C009C4356 /* MMJStackiOSViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMJStackiOSViewAppDelegate.m; sourceTree = "<group>"; };
+		A9886E5E177A027C009C4356 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A9886E60177A027C009C4356 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A9886E62177A027C009C4356 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A9886E65177A027C009C4356 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPhone.storyboard; sourceTree = "<group>"; };
+		A9886E6F177A02EA009C4356 /* MMJStackOverflowFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMJStackOverflowFetcher.h; path = MMJStackiOSView/StackFetcher/MMJStackOverflowFetcher.h; sourceTree = "<group>"; };
+		A9886E70177A02EA009C4356 /* MMJStackOverflowFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMJStackOverflowFetcher.m; path = MMJStackiOSView/StackFetcher/MMJStackOverflowFetcher.m; sourceTree = "<group>"; };
+		A9886E73177AEBAA009C4356 /* StackOFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOFTableViewController.h; sourceTree = "<group>"; };
+		A9886E74177AEBAA009C4356 /* StackOFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOFTableViewController.m; sourceTree = "<group>"; };
+		A9886E76177AEC77009C4356 /* iOSStackOFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSStackOFTableViewController.h; sourceTree = "<group>"; };
+		A9886E77177AEC77009C4356 /* iOSStackOFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSStackOFTableViewController.m; sourceTree = "<group>"; };
+		A9886E79177AF6EA009C4356 /* StackOFQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOFQuestionViewController.h; sourceTree = "<group>"; };
+		A9886E7A177AF6EA009C4356 /* StackOFQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOFQuestionViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9886E46177A027C009C4356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9886E4D177A027C009C4356 /* UIKit.framework in Frameworks */,
+				A9886E4F177A027C009C4356 /* Foundation.framework in Frameworks */,
+				A9886E51177A027C009C4356 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9886E40177A027C009C4356 = {
+			isa = PBXGroup;
+			children = (
+				A9886E52177A027C009C4356 /* MMJStackiOSView */,
+				A9886E4B177A027C009C4356 /* Frameworks */,
+				A9886E4A177A027C009C4356 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9886E4A177A027C009C4356 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9886E49177A027C009C4356 /* MMJStackiOSView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9886E4B177A027C009C4356 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9886E4C177A027C009C4356 /* UIKit.framework */,
+				A9886E4E177A027C009C4356 /* Foundation.framework */,
+				A9886E50177A027C009C4356 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9886E52177A027C009C4356 /* MMJStackiOSView */ = {
+			isa = PBXGroup;
+			children = (
+				A9886E64177A027C009C4356 /* iPhone.storyboard */,
+				A9886E73177AEBAA009C4356 /* StackOFTableViewController.h */,
+				A9886E74177AEBAA009C4356 /* StackOFTableViewController.m */,
+				A9886E76177AEC77009C4356 /* iOSStackOFTableViewController.h */,
+				A9886E77177AEC77009C4356 /* iOSStackOFTableViewController.m */,
+				A9886E79177AF6EA009C4356 /* StackOFQuestionViewController.h */,
+				A9886E7A177AF6EA009C4356 /* StackOFQuestionViewController.m */,
+				A9886E72177A076B009C4356 /* StackFetcher */,
+				A9886E53177A027C009C4356 /* Supporting Files */,
+			);
+			path = MMJStackiOSView;
+			sourceTree = "<group>";
+		};
+		A9886E53177A027C009C4356 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9886E5B177A027C009C4356 /* MMJStackiOSViewAppDelegate.h */,
+				A9886E5C177A027C009C4356 /* MMJStackiOSViewAppDelegate.m */,
+				A9886E54177A027C009C4356 /* MMJStackiOSView-Info.plist */,
+				A9886E55177A027C009C4356 /* InfoPlist.strings */,
+				A9886E58177A027C009C4356 /* main.m */,
+				A9886E5A177A027C009C4356 /* MMJStackiOSView-Prefix.pch */,
+				A9886E5E177A027C009C4356 /* Default.png */,
+				A9886E60177A027C009C4356 /* Default@2x.png */,
+				A9886E62177A027C009C4356 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9886E72177A076B009C4356 /* StackFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				A9886E6F177A02EA009C4356 /* MMJStackOverflowFetcher.h */,
+				A9886E70177A02EA009C4356 /* MMJStackOverflowFetcher.m */,
+			);
+			name = StackFetcher;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9886E48177A027C009C4356 /* MMJStackiOSView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9886E6C177A027C009C4356 /* Build configuration list for PBXNativeTarget "MMJStackiOSView" */;
+			buildPhases = (
+				A9886E45177A027C009C4356 /* Sources */,
+				A9886E46177A027C009C4356 /* Frameworks */,
+				A9886E47177A027C009C4356 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MMJStackiOSView;
+			productName = MMJStackiOSView;
+			productReference = A9886E49177A027C009C4356 /* MMJStackiOSView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9886E41177A027C009C4356 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MMJStackiOSView;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Token d.o.o.";
+			};
+			buildConfigurationList = A9886E44177A027C009C4356 /* Build configuration list for PBXProject "MMJStackiOSView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A9886E40177A027C009C4356;
+			productRefGroup = A9886E4A177A027C009C4356 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9886E48177A027C009C4356 /* MMJStackiOSView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9886E47177A027C009C4356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9886E57177A027C009C4356 /* InfoPlist.strings in Resources */,
+				A9886E5F177A027C009C4356 /* Default.png in Resources */,
+				A9886E61177A027C009C4356 /* Default@2x.png in Resources */,
+				A9886E63177A027C009C4356 /* Default-568h@2x.png in Resources */,
+				A9886E66177A027C009C4356 /* iPhone.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9886E45177A027C009C4356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9886E59177A027C009C4356 /* main.m in Sources */,
+				A9886E5D177A027C009C4356 /* MMJStackiOSViewAppDelegate.m in Sources */,
+				A9886E71177A02EA009C4356 /* MMJStackOverflowFetcher.m in Sources */,
+				A9886E75177AEBAA009C4356 /* StackOFTableViewController.m in Sources */,
+				A9886E78177AEC77009C4356 /* iOSStackOFTableViewController.m in Sources */,
+				A9886E7B177AF6EA009C4356 /* StackOFQuestionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A9886E55177A027C009C4356 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9886E56177A027C009C4356 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A9886E64177A027C009C4356 /* iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9886E65177A027C009C4356 /* en */,
+			);
+			name = iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A9886E6A177A027C009C4356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A9886E6B177A027C009C4356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9886E6D177A027C009C4356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MMJStackiOSView/MMJStackiOSView-Prefix.pch";
+				INFOPLIST_FILE = "MMJStackiOSView/MMJStackiOSView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A9886E6E177A027C009C4356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MMJStackiOSView/MMJStackiOSView-Prefix.pch";
+				INFOPLIST_FILE = "MMJStackiOSView/MMJStackiOSView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9886E44177A027C009C4356 /* Build configuration list for PBXProject "MMJStackiOSView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9886E6A177A027C009C4356 /* Debug */,
+				A9886E6B177A027C009C4356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9886E6C177A027C009C4356 /* Build configuration list for PBXNativeTarget "MMJStackiOSView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9886E6D177A027C009C4356 /* Debug */,
+				A9886E6E177A027C009C4356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9886E41177A027C009C4356 /* Project object */;
+}

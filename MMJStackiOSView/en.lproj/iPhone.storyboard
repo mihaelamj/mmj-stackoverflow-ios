@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zmi-o3-aJT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--IOS StackOF Table View Controller - Latest SO iOS Questions-->
+        <scene sceneID="1ZG-7F-fBb">
+            <objects>
+                <tableViewController id="saR-b1-nga" customClass="iOSStackOFTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Fzl-Ng-baD">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SOQuestionCell" textLabel="yEo-2w-xbC" detailTextLabel="okl-a9-r64" style="IBUITableViewCellStyleSubtitle" id="AFk-jJ-Yzt">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEo-2w-xbC">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okl-a9-r64">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="0cL-ul-8XA" kind="push" identifier="ShowQuestion" id="jxB-NN-Snt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="saR-b1-nga" id="a0S-gO-y8r"/>
+                            <outlet property="delegate" destination="saR-b1-nga" id="JaA-Rf-K09"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Latest SO iOS Questions" id="CYe-l9-njH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cM-so-66Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="-12"/>
+        </scene>
+        <!--StackOF Question View Controller-->
+        <scene sceneID="s9H-F1-qcu">
+            <objects>
+                <viewController id="0cL-ul-8XA" customClass="StackOFQuestionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ukF-je-NBH">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" horizontalHuggingPriority="692" verticalHuggingPriority="769" translatesAutoresizingMaskIntoConstraints="NO" id="b8a-kO-V7S">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="436" id="w7R-Rg-9fT"/>
+                                </constraints>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b8a-kO-V7S" firstAttribute="top" secondItem="ukF-je-NBH" secondAttribute="top" type="default" id="lpe-rq-l6M"/>
+                            <constraint firstItem="b8a-kO-V7S" firstAttribute="leading" secondItem="ukF-je-NBH" secondAttribute="leading" type="default" id="oWw-Xu-9AH"/>
+                            <constraint firstItem="b8a-kO-V7S" firstAttribute="trailing" secondItem="ukF-je-NBH" secondAttribute="trailing" type="default" id="yTB-Hv-BhT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gqT-Qk-gWA"/>
+                    <connections>
+                        <outlet property="questionWebView" destination="b8a-kO-V7S" id="g5S-0g-kBa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5tn-6l-rT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862" y="-12"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WZ6-Ml-ohJ">
+            <objects>
+                <navigationController id="zmi-o3-aJT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xyQ-we-TJF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="saR-b1-nga" kind="relationship" relationship="rootViewController" id="yCQ-lY-bbp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0n6-Nl-Y1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-78" y="-12"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

@@ -32,8 +32,6 @@
 {
     NSDictionary *owner = [MMJStackOverflowFetcher getQuestion:self.soQuestions atIndex:row];
     if (owner) {
-        NSLog(@"owner: %@", owner[SO_QUESTION_OWNER][SO_QUESTION_OWNER_NAME]);
-        NSLog(@"rep: %d", (int)[owner[SO_QUESTION_OWNER][SO_QUESTION_OWNER_REP] intValue]);
         return [NSString stringWithFormat:@"%@ : %d", owner[SO_QUESTION_OWNER][SO_QUESTION_OWNER_NAME], (int)[owner[SO_QUESTION_OWNER][SO_QUESTION_OWNER_REP] intValue]]; // 
     }
     return @"unknown";

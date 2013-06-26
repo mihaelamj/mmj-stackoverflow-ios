@@ -15,7 +15,7 @@
     static NSUInteger counter = 0;
     static dispatch_queue_t queue;
     if (!queue) {
-        queue = dispatch_queue_create("GlobalNetworkActivity.h Queue", NULL);
+        queue = dispatch_queue_create("GlobalNetworkActivity Queue", NULL);
     }
     dispatch_sync(queue, ^{
         if (counter + change <= 0) {

@@ -12,39 +12,6 @@
 
 #define STACKOVERFLOW_QUESTION_URL @"http://api.stackexchange.com/2.1/questions/%@?order=desc&sort=activity&site=stackoverflow&filter=!9hnGsr.M2"
 
-
-//{
-//    "items": [
-//              {
-//                  "question_id": 17320811,
-//                  "last_edit_date": 1372252829,
-//                  "creation_date": 1372251758,
-//                  "last_activity_date": 1372252829,
-//                  "score": 0,
-//                  "answer_count": 1,
-//                  "body": "<p>I'm confused with this <strong>NSFetchedResultsController</strong>…",
-//                  "title": "NSFetchedResults not updating automatically",
-//                  "tags": [
-//                           "iphone",
-//                           "ios",
-//                           "objective-c",
-//                           "nsfetchedresultscontrolle"
-//                           ],
-//                  "view_count": 12,
-//                  "owner": {
-//                      "user_id": 1833434,
-//                      "display_name": "MichiZH",
-//                      "reputation": 70,
-//                      "user_type": "registered",
-//                      "profile_image": "https://www.gravatar.com/avatar/1da6620d08d9017917972f8bce78039c?d=identicon&r=PG",
-//                      "link": "http://stackoverflow.com/users/1833434/michizh",
-//                      "accept_rate": 50
-//                  },
-//                  "link": "http://stackoverflow.com/questions/17320811/nsfetchedresults-not-updating-automatically",
-//                  "is_answered": false
-//              }
-//}
-
 @implementation MMJStackOverflowFetcher
 
 + (NSDictionary *)executeSOFetch:(NSString *)URL
@@ -75,15 +42,7 @@
 + (NSDictionary *)getQuestionWithBody:(NSString *)questionID
 {
     NSString *questionURL = [NSString stringWithFormat:STACKOVERFLOW_QUESTION_URL, questionID];
-//    NSDictionary *questionDict = [[self executeSOFetch:questionURL] valueForKeyPath:SO_ITEMS];
-    NSDictionary *questionWithItemsDict = [self executeSOFetch:questionURL];
-    NSArray *items = [questionWithItemsDict valueForKeyPath:SO_ITEMS];
-    NSDictionary *questionDict = [items lastObject];
-    
-    NSLog(@"questionWithItemsDict: %@", questionWithItemsDict);    
-    NSLog(@"items: %@", items);
-    NSLog(@"questionDict: %@", questionDict);
-    
+    NSDictionary *questionWithItemsDict = [self executeSOFetch:questionURL];   
     return [[questionWithItemsDict valueForKeyPath:SO_ITEMS] lastObject];
 }
 
@@ -99,9 +58,7 @@
 
 + (NSDictionary *)getQuestion:(NSArray *)questions atIndex:(NSUInteger)index
 {
-    return [NSDictionary dictionaryWithDictionary:[questions objectAtIndex:index]];
-//    return (NSDictionary *)[questions objectAtIndex:index]; // this would require weak pointer
-    
+    return [NSDictionary dictionaryWithDictionary:[questions objectAtIndex:index]];  
 }
 
 + (NSDictionary *)getQuestionOwner:(NSArray *)questions atIndex:(NSUInteger)index

@@ -12,6 +12,7 @@
 @interface StackOFQuestionViewController ()
 
 @property (weak, nonatomic) IBOutlet UIWebView *questionWebView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activitySpinner;
 
 @end
 
@@ -30,9 +31,29 @@
 
 - (void)loadQuestionBody
 {
-    if (self.question) {
-        int qid = [self.question[SO_QUESTION_ID] intValue]; 
-        self.questionBody = [MMJStackOverflowFetcher getQuestionBody:[NSString stringWithFormat:@"%d", qid]];
+    if (self.question) {        
+        int qid = [self.question[SO_QUESTION_ID] intValue];
+        
+        [self.activitySpinner startAnimating];
+        dispatch_queue_t downloadSOQueue = dispatch_queue_create("Question body downloader", NULL);
+        
+        dispatch_async(downloadSOQueue, ^{ //1. get in another thread
+            
+#pragma mark - Remove this line below - testing
+            [NSThread sleepForTimeInterval:2.0];
+            
+            NSString *body = [MMJStackOverflowFetcher getQuestionBody:[NSString stringWithFormat:@"%d", qid]];
+            //check if user clicked back, if we still have the same question
+            if ([self.question[SO_QUESTION_ID] intValue] == qid) {
+                dispatch_async(dispatch_get_main_queue(), ^{ // 2. do in main queue
+                if (body) {
+                    self.questionBody = body;
+                    [self.questionWebView loadHTMLString:[self.questionBody description] baseURL:[NSURL URLWithString:@"about:none"]];
+                }
+                [self.activitySpinner stopAnimating];
+            });            }
+            
+        });
     } else {
         self.questionBody = nil;
     }
@@ -45,7 +66,7 @@
     self.navigationItem.title = self.question[SO_QUESTION_TITLE];
     [self loadQuestionBody];
 
-    [self.questionWebView loadHTMLString:[self.questionBody description] baseURL:[NSURL URLWithString:@"about:none"]];
+
     
     NSLog(@"%@", self.questionBody);
 }

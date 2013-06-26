@@ -67,9 +67,12 @@
                                 </constraints>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                             </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8vB-ta-svs"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8vB-ta-svs" firstAttribute="centerY" secondItem="b8a-kO-V7S" secondAttribute="centerY" type="default" id="H7N-vb-zL1"/>
+                            <constraint firstItem="8vB-ta-svs" firstAttribute="centerX" secondItem="b8a-kO-V7S" secondAttribute="centerX" type="default" id="boS-3k-MHw"/>
                             <constraint firstItem="b8a-kO-V7S" firstAttribute="top" secondItem="ukF-je-NBH" secondAttribute="top" type="default" id="lpe-rq-l6M"/>
                             <constraint firstItem="b8a-kO-V7S" firstAttribute="leading" secondItem="ukF-je-NBH" secondAttribute="leading" type="default" id="oWw-Xu-9AH"/>
                             <constraint firstItem="b8a-kO-V7S" firstAttribute="trailing" secondItem="ukF-je-NBH" secondAttribute="trailing" type="default" id="yTB-Hv-BhT"/>
@@ -77,6 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gqT-Qk-gWA"/>
                     <connections>
+                        <outlet property="activitySpinner" destination="8vB-ta-svs" id="2cc-cJ-TwR"/>
                         <outlet property="questionWebView" destination="b8a-kO-V7S" id="g5S-0g-kBa"/>
                     </connections>
                 </viewController>
@@ -103,26 +107,6 @@
             <point key="canvasLocation" x="-78" y="-12"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="StackOFQuestionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StackOFQuestionViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="questionWebView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="StackOFTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StackOFTableViewController.h"/>
-        </class>
-        <class className="UIRefreshControl" superclassName="UIControl">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIRefreshControl.h"/>
-        </class>
-        <class className="iOSStackOFTableViewController" superclassName="StackOFTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iOSStackOFTableViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

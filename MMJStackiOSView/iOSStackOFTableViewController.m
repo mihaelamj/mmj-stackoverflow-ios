@@ -31,11 +31,11 @@
     dispatch_queue_t loadSO= dispatch_queue_create("MMJStackOverflowFetcher latest questions", NULL);
     dispatch_async(loadSO, ^{
         //simulate long operation
-        [NSThread sleepForTimeInterval:2.0];
+//        [NSThread sleepForTimeInterval:2.0];
         // make local variable to stay out of the UI
         NSArray *latestiOSQuestions = [MMJStackOverflowFetcher latestiOSQuestions];
         dispatch_async(dispatch_get_main_queue(), ^{
-            // in the main queue set the self.photos because it affects the UI
+            // in the main queue set the self.soQuestions because it affects the UI
             self.soQuestions = latestiOSQuestions;
             [self.refreshControl endRefreshing];
         });

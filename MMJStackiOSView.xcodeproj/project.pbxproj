@@ -21,6 +21,7 @@
 		A9886E75177AEBAA009C4356 /* StackOFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9886E74177AEBAA009C4356 /* StackOFTableViewController.m */; };
 		A9886E78177AEC77009C4356 /* iOSStackOFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9886E77177AEC77009C4356 /* iOSStackOFTableViewController.m */; };
 		A9886E7B177AF6EA009C4356 /* StackOFQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9886E7A177AF6EA009C4356 /* StackOFQuestionViewController.m */; };
+		A9886E7E177B5C5D009C4356 /* GlobalNetworkActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = A9886E7D177B5C5C009C4356 /* GlobalNetworkActivity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		A9886E77177AEC77009C4356 /* iOSStackOFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSStackOFTableViewController.m; sourceTree = "<group>"; };
 		A9886E79177AF6EA009C4356 /* StackOFQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOFQuestionViewController.h; sourceTree = "<group>"; };
 		A9886E7A177AF6EA009C4356 /* StackOFQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOFQuestionViewController.m; sourceTree = "<group>"; };
+		A9886E7C177B5C5C009C4356 /* GlobalNetworkActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalNetworkActivity.h; path = ../GlobalNetworkActivity.h; sourceTree = "<group>"; };
+		A9886E7D177B5C5C009C4356 /* GlobalNetworkActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobalNetworkActivity.m; path = ../GlobalNetworkActivity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				A9886E77177AEC77009C4356 /* iOSStackOFTableViewController.m */,
 				A9886E79177AF6EA009C4356 /* StackOFQuestionViewController.h */,
 				A9886E7A177AF6EA009C4356 /* StackOFQuestionViewController.m */,
+				A9886E7C177B5C5C009C4356 /* GlobalNetworkActivity.h */,
+				A9886E7D177B5C5C009C4356 /* GlobalNetworkActivity.m */,
 				A9886E72177A076B009C4356 /* StackFetcher */,
 				A9886E53177A027C009C4356 /* Supporting Files */,
 			);
@@ -204,6 +209,7 @@
 				A9886E75177AEBAA009C4356 /* StackOFTableViewController.m in Sources */,
 				A9886E78177AEC77009C4356 /* iOSStackOFTableViewController.m in Sources */,
 				A9886E7B177AF6EA009C4356 /* StackOFQuestionViewController.m in Sources */,
+				A9886E7E177B5C5D009C4356 /* GlobalNetworkActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

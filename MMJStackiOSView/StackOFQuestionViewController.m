@@ -8,6 +8,7 @@
 
 #import "StackOFQuestionViewController.h"
 #import "MMJStackOverflowFetcher.h"
+#import "GlobalNetworkActivity.h"
 
 @interface StackOFQuestionViewController ()
 
@@ -37,22 +38,24 @@
         [self.activitySpinner startAnimating];
         dispatch_queue_t downloadSOQueue = dispatch_queue_create("Question body downloader", NULL);
         
-        dispatch_async(downloadSOQueue, ^{ //1. get in another thread
-            
+        dispatch_async(downloadSOQueue, ^{ //1. get in another thread            
 #pragma mark - Remove this line below - testing
             [NSThread sleepForTimeInterval:2.0];
             
+            [GlobalNetworkActivity show];
             NSString *body = [MMJStackOverflowFetcher getQuestionBody:[NSString stringWithFormat:@"%d", qid]];
+            [GlobalNetworkActivity hide];
+            
             //check if user clicked back, if we still have the same question
             if ([self.question[SO_QUESTION_ID] intValue] == qid) {
                 dispatch_async(dispatch_get_main_queue(), ^{ // 2. do in main queue
-                if (body) {
-                    self.questionBody = body;
-                    [self.questionWebView loadHTMLString:[self.questionBody description] baseURL:[NSURL URLWithString:@"about:none"]];
-                }
-                [self.activitySpinner stopAnimating];
-            });            }
-            
+                    if (body) {
+                        self.questionBody = body;
+                        [self.questionWebView loadHTMLString:[self.questionBody description] baseURL:[NSURL URLWithString:@"about:none"]];
+                    }
+                    [self.activitySpinner stopAnimating];
+                });
+            }
         });
     } else {
         self.questionBody = nil;
@@ -61,13 +64,9 @@
 
 - (void)updateUI
 {
-    NSLog(@"%@", self.question);
-    
+    NSLog(@"%@", self.question);    
     self.navigationItem.title = self.question[SO_QUESTION_TITLE];
     [self loadQuestionBody];
-
-
-    
     NSLog(@"%@", self.questionBody);
 }
 
